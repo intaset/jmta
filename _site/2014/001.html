@@ -1,0 +1,1991 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+
+<meta charset="utf-8">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>JMTA -  Multi-scale Analysis of Local Phase and Local Orientation for Dynamic Facial Expression Recognition</title>
+<link href='http://fonts.googleapis.com/css?family=PT+Sans:300,400,400italic,500,600,700,700italic&amp;subset=latin,greek-ext,cyrillic,latin-ext,greek,cyrillic-ext,vietnamese' rel='stylesheet' type='text/css' />
+
+<link href='http://fonts.googleapis.com/css?family=Antic+Slab:300,400,400italic,500,600,700,700italic&amp;subset=latin,greek-ext,cyrillic,latin-ext,greek,cyrillic-ext,vietnamese' rel='stylesheet' type='text/css' />
+
+<link rel="stylesheet" href="../css/style.css" />
+
+<link href="../css/bootstrap.css" rel="stylesheet">
+<link href="../images/icon.ico" rel="shortcut icon" type="image/x-icon">
+
+<!--Goole Analytics Most Visited Article Code-->
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-53982605-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+<!-- Include Most Visited Articles JS Code -->
+ <script type="text/javascript" src="mostvisited.js"></script> 
+ 
+<!-- Include SHARE THIS js sources -->
+<script type="text/javascript">var switchTo5x=true;</script>
+<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+<script type="text/javascript">stLight.options({publisher: "8f49e037-5155-4595-abc0-d069deae6488", doNotHash: true, doNotCopy: false, hashAddressBar: false, onhover:false});</script>
+
+</head>
+
+<body>
+
+<div class="wrapper">
+
+  <div class="header">
+
+    <div class="container">
+
+      <div class="row">
+        <header id="header">
+          <div class="logo col-sm-4"><a href="http://avestia.com"><img src="/images/logo.png" alt="Journal" class="img" /></a></div>
+          <div class="threemenu col-sm-5">
+            <div class="row"><a class="link col-sm-4" href="http://avestia.com"><img src="/images/home.jpg" class="img"></a> <a class="link col-sm-4" href="http://avestia.com/journals/"><img src="/images/journals.jpg" class="img"></a> <a class="link col-sm-4" href="http://amss.avestia.com"><img src="/images/submit.jpg" class="img"></a></div>
+          </div>
+          <div class="searching col-sm-3">
+<div class="sharethis">Share this page:<br/>
+<span class='st_email'>
+<span class='st_facebook'>
+<span class='st_twitter'>
+<span class='st_googleplus'>
+<span class='st_linkedin'>
+</div>
+            
+         <div class="search_wrapper">
+         <form class="search" action="../results" method="get">
+              <fieldset>
+                <span class="text">
+                <input name="q" id="q" type="text" value="" placeholder="Search..." /><button class="search_top_button">GO</button>
+                
+
+              </fieldset>
+            </form>
+            
+            </div>
+          </div>
+          <div class="col-lg-12">
+
+
+          <div class="avada-row">
+
+            <nav id="nav" class="nav-holder">
+
+              <div role="navigation" class="navbar navbar-default">
+
+                <div class="container-fluid">
+
+                  <div class="navbar-header">
+                  
+                    <button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle" type="button"> <span class="sr-only">Toggle navigation <span class="icon-bar"> <span class="icon-bar"> <span class="icon-bar"> </button>
+<span class="navbar-brand" href="#">Menu</span>
+                  </div>
+
+                  <div class="navbar-collapse collapse">
+
+                    <ul class="nav navbar-nav">	
+					<li><a href="/">Journal Home</a></li><span class="menu-line">|</span>
+                        <li><a href="../aims/">Aims and Scopes</a></li><span class="menu-line">|</span>
+                        <li><a href="../charges/">Article Processing Charges</a></li><span class="menu-line">|</span>
+                        <li><a href="../guidelines/">Author Guidelines</a></li><span class="menu-line">|</span>
+                        <li><a href="../board/">Editorial Board</a></li><br>
+                        <li><a href="../volumes/">Past Volumes</a></li><span class="menu-line">|</span>
+                        <li><a href="../current/">Current Volume</a></li><span class="menu-line">|</span>
+                        <li><a href="../propose/">Propose a Special Topic</a></li><span class="menu-line">|</span>
+                        <li><a href="../register/">Receive Updates</a></li><span class="menu-line">|</span>
+                        <li><a href="../contact/">Contact Us</a></li>
+
+
+
+
+                    </ul>
+
+                  </div>
+
+                  <!--/.nav-collapse -->
+
+                </div>
+
+                <!--/.container-fluid -->
+
+              </div>
+
+            </nav>
+
+            </div>
+
+          </div>
+          <div class="clearfix"></div>
+
+        </header>
+
+      </div>
+
+    </div>
+<div class="clearfix"></div>
+  </div>
+
+  <div class="slider">
+
+  <div class="container">
+
+  <div class="row"><div class="col-lg-12"><img class="img2" src="../images/international.jpg" alt="img"></div></div>
+
+  </div>
+
+  </div>
+
+  <div class="container">
+  <div class="clearfix"></div>
+  <div class="row">
+
+  <div class="col-lg-12 text"><div align=center>
+<div class="table">
+
+    <table class=MsoTableGrid border=0 cellspacing=0 cellpadding=0 style='border:none; width: 100%'>
+         <tr>
+                <td>Volume 1, Year 2014 - Pages 1-10</td>
+                <td align="right"><a href="PDF/001.pdf">View PDF (Full-text)</a></td>
+        </tr>
+         <tr>
+                <td>DOI: 10.11159/jmta.2014.001</td>
+                <td align="right"><a href="#references">Linked References</a></td>
+        </tr>
+		<tr>
+		<td colspan="2">ISSN: 2368-5956</td>
+		</tr>
+     </table>
+     
+</div>
+</div>
+
+<br>
+
+<p align="center" style="font-size:22pt;">Multi-scale Analysis of Local Phase and Local Orientation for Dynamic Facial Expression Recognition</p>
+
+<p align="center">
+	<strong>Seyedehsamaneh Shojaeilangari&sup1;, Eam-Khwang Teoh&sup1;, Wei-Yun Yau&sup2;, Jun Li&sup2; </strong>
+    
+<br>&sup1;School of Electrical and Electronic Engineering, 
+Nanyang Technological University, Singapore<br>
+seyedehs1@e.ntu.edu.sg; eekteoh@ntu.edu.sg<br>
+
+&sup2;Institute for Infocomm Research, A*STAR, Singapore<br>
+wyyau@i2r.a-star.edu.sg; jli@i2r.a-star.edu.sg
+</p>
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+<p align="justify"><i><strong>Abstract- </strong> Automated facial expression analysis is an active research area for human-computer interaction as it enables computers to understand and interact with humans in more natural ways. In this work, a novel local descriptor is proposed for facial expression analysis in a video sequence. The proposed descriptor is based on histograms of local phase and local orientation of gradients obtained from a sequence of face images to describe the spatial and temporal information of the face images. The descriptor is able to effectively represent the temporal local information and its spatial locations which are important cues for facial expression recognition. This is further extended to multi-scale to achieve better performance in natural settings where the image resolution varies. The experimental results conducted on the Cohn-Kanade (CK+) database to detect six basic emotions achieved an accuracy of 94.58%. For the AVEC 2011 video-subchallenge, the detection of four emotion dimensions obtained comparable accuracy with the highest reported average accuracy in the test evaluation.The advantages of our method include local feature extraction incorporating temporal domain, high accuracy and robustness to illumination changes. Thus the proposed descriptor is suited for continuous facial expression analysis in the area of human-computer interaction.</i></p>
+
+<p align="left"><i><strong>Keywords:</strong></i> Local phase, local orientation, spatio-temporal histogram, dynamic facial expression, emotion recognition.</p>
+
+<p>&nbsp;</p>
+<p align="justify"> &copy; Copyright 2014 Authors - This is an Open Access article published under the <a href="http://creativecommons.org/licenses/by/3.0" target="_blank">Creative Commons Attribution License terms</a>. Unrestricted use, distribution, and reproduction in any medium are permitted, provided the original work is properly cited.</p>
+
+<p>&nbsp;</p>
+<P>
+Date Received: 2013-09-17 <Br>
+Date Accepted: 2014-02-05 <br>
+Date Published: 2014-02-24
+</P>
+
+<img src="../images/line.png" width="100%;" height="1" />
+<h2>1. Introduction</h2>
+
+
+
+<p align="justify" style="text-indent:19.85pt;">Facial
+expression plays an important role in human-human interaction and may be
+considered as the most important communication link to convey the information
+related to the states of human emotion. This motivated many researchers to
+develop automatic solutions that enable the computers to recognize facial
+expression and to derive the associated emotional states in order to develop
+better human-computer interaction systems. If successful, the solutions will
+also allow computers to generate human-like response that commensurate with the
+recognized emotion. </p>
+
+<p align="justify" style="text-indent:19.85pt;">Although
+much progress has been reported in this field, there are still difficult
+research challenges remaining to achieve a fully automated facial expression
+recognition system. Majority of the previous works focused on facial expression
+processing via static images and ignored the dynamic properties of a face while
+expressing an emotion [1-5]. However, it has been shown that human visual system is able to
+detect an expression more accurately when its temporal information is taken
+into account [6]. </p>
+
+<p align="justify" style="text-indent:19.85pt;">Considering
+the temporal information of a dynamic event, a few techniques have been
+developed to deal with facial expression recognition. These
+include geometrical displacement [7], Hidden Markov Models [8, 9], dynamic
+texture descriptors [10], and Dynamic Bayesian Networks (DBN) [11].  </p>
+
+<p align="justify" style="text-indent:19.85pt;">Deriving
+a proper facial representation from a sequence of images is crucial to the
+success of a facial expression recognition system, especially if the
+application requires continuous processing of the video stream such as in the
+case of human-computer interaction. The local energy and local phase analysis methods
+have been successfully used to detect various interest points in images such as
+edges, corners, valleys, and lines. Based on physiological evidence, human
+visual system is able to detect the patterns in an image where the phase
+information is highly ordered [12]. There were several reported works done to
+detect the low-level facial image features using local energy or local phase
+information. In addition, phase-based feature detection is popularly used in
+medical image analysis [13]. </p>
+
+<p align="justify" style="text-indent:19.85pt;">Chi Ho et al. [14] proposed a multi-scale local phase quantization
+histogram for face detection to alleviate the blur and illumination conditions
+challenges.  Their novel descriptor is formed by projecting the
+Multi-scale local phase information into an LDA space.</p>
+
+<p align="justify" style="text-indent:19.85pt;">Sarfraz
+and Hellwich [15] presented a robust pose estimation procedure for face
+recognition using the local energy model. Their feature descriptor is claimed
+to be insensitive to illumination and some other common variations in facial
+appearance such as skin color. Gundimada and Asari [12] also proposed a novel
+feature selection on phase congruency images to recognize faces with extreme
+variations such as partial occlusion, non-uniform occlusion, and varying
+expressions. </p>
+
+<p align="justify" style="text-indent:19.85pt;">The
+work by Buciu [16] is the only study we found that uses phase congruency  to
+extract the facial features for facial expression classification. The author
+measured the similarity of sample phases in the frequency domain and used them
+to construct reliable features.      </p>
+
+<p align="justify" style="text-indent:19.85pt;"> In
+this paper, we focus on face emotion recognition from video sequences
+considering the spatio-temporal information of such expressions. In our
+proposed approach, a novel phase-based descriptor is proposed to process the
+local structures of sequenced images. We also extend our feature set by
+considering the complementary information of local orientations. The final descriptor is the concatenation of spatio-temporal histogram
+of local phase and spatio-temporal histogram of local orientation. The novelty
+of our proposed method includes: </p>
+
+<p align="justify" style="text-indent:30pt;">(1) Extending the phase-based descriptor for spatio-temporal event analysis.</p>
+<p align="justify" style="text-indent:30pt;">(2) Formulating the 3D local orientation of features as additional information to represent all local structures.</p>
+<p align="justify" style="text-indent:30pt;">(3) Combining the spatio-temporal histogram of local phase and local orientation to extract both static and dynamic information as well as spatial information of a face from a video sequence.</p>
+<p align="justify" style="text-indent:30pt;">(4)  Incorporating multi-scale analysis for better performance in natural settings with varying image resolution.</p>
+
+<h2> 2. Background </h2>
+
+<p align="justify" style="text-indent:19.85pt;">Local
+phase and local energy are two important concepts used to describe the local
+structural information of an image. Local phase is able to effectively depict
+useful image structures such as transitions or discontinuities, providing the
+type of structure and location information while preserving the image
+structures. Another advantage of phase-based feature is that it is not
+sensitive to intensity variation. Local energy, as a complementary descriptor
+to local phase, contains the strength or sharpness of the feature [17]. </p>
+
+<p align="justify" style="text-indent:19.85pt;">The
+concept of local phase and energy was originally proposed for 1 dimension (1D)
+signal analysis. For 1D signal, orientation is trivial and does not contain
+other additional information. Therefore, the local structure is totally
+described by local phase and energy [13]. However, for higher dimensional
+signal (3D in our case), local orientation is needed in addition to local phase
+and energy, to completely describe the features in the signal.</p>
+
+<p align="justify" style="text-indent:19.85pt;">To
+extend the concept of local analysis to 3D, a quadrature pair of oriented
+bandpass filters is used. However, since the oriented filter bank is discrete,
+thus proper filter selection is required to cater to different orientation and
+scale present in an image. This motivate researchers to use the monogenic
+signal concept [17].</p>
+
+<p align="justify" style="text-indent:19.85pt;">The
+monogenic signal provides an isotropic extension of the analytic signal to 3D
+by introducing a vector-valued odd filter (Riesz filter) with Fourier
+representation [17] as:</p>
+
+<div align=center>
+
+
+<table class=MsoTableGrid border=0 cellspacing=0 cellpadding=0 width="100%"
+ style='width:100.0%;border-collapse:collapse;border:none'>
+ <tr>
+  <td width="100%" style='width:91.46%;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><img src="001-JMTA_files/image001.png" class="img"></p>
+  </td>
+  <td width="10%" style='width:8.54%;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=right style='text-align:right'>(1)</p>
+  </td>
+ </tr>
+</table>
+
+
+</div>
+
+
+<p align="justify" style="text-indent:0pt;">where<i> u</i>, <i>v</i>, and <i>w</i>
+are the Fourier domain coordinates and <i>i</i>
+represents the imaginary part of the signal.</p>
+
+<p align="justify" style="text-indent:19.85pt;">The
+monogenic signal is then represented by combining the original 3D image with
+the Riesz filtered components:</p>
+
+<div align=center>
+
+
+<table class=MsoTableGrid border=0 cellspacing=0 cellpadding=0 width="100%"
+ style='width:100.0%;border-collapse:collapse;border:none'>
+ <tr>
+  <td width="100%" style='width:91.46%;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><img src="001-JMTA_files/image002.png" class="img"></p>
+  </td>
+  <td width="10%" style='width:8.54%;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=right style='text-align:right'>(2)</p>
+  </td>
+ </tr>
+</table>
+
+
+</div>
+
+
+<p align="justify" style="text-indent:0pt;">where<img width=97 height=20 src="001-JMTA_files/image003.png"> and <img width=26 height=20 src="001-JMTA_files/image004.png"> are defined as follows:</p><br />
+
+<div align=center>
+
+
+<table class=MsoTableGrid border=0 cellspacing=0 cellpadding=0 width="100%"
+ style='width:100.0%;border-collapse:collapse;border:none'>
+ <tr>
+  <td width="100%" style='width:91.46%;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><img src="001-JMTA_files/image005.png" class="img"></p>
+  </td>
+  <td width="10%" style='width:8.54%;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=right style='text-align:right'>(3)</p>
+  </td>
+ </tr>
+</table>
+
+
+</div>
+
+<div align=center>
+
+
+<table class=MsoTableGrid border=0 cellspacing=0 cellpadding=0 width="100%"
+ style='width:100.0%;border-collapse:collapse;border:none'>
+ <tr>
+  <td width="100%" style='width:91.46%;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><img src="001-JMTA_files/image006.png" class="img"></p>
+  </td>
+  <td width="10%" style='width:8.54%;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=right style='text-align:right'>(4)</p>
+  </td>
+ </tr>
+</table>
+
+
+</div>
+
+<div align=center>
+
+
+<table class=MsoTableGrid border=0 cellspacing=0 cellpadding=0 width="100%"
+ style='width:100.0%;border-collapse:collapse;border:none'>
+ <tr>
+  <td width="100%" style='width:91.46%;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><img src="001-JMTA_files/image007.png" class="img"></p>
+  </td>
+  <td width="10%" style='width:8.54%;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=right style='text-align:right'>(5)</p>
+  </td>
+ </tr>
+</table>
+
+
+</div>
+
+<div align=center>
+
+
+<table class=MsoTableGrid border=0 cellspacing=0 cellpadding=0 width="100%"
+ style='width:100.0%;border-collapse:collapse;border:none'>
+ <tr>
+  <td width="100%" style='width:91.46%;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><img src="001-JMTA_files/image008.png" class="img"></p>
+  </td>
+  <td width="10%" style='width:8.54%;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=right style='text-align:right'>(6)</p>
+  </td>
+ </tr>
+</table>
+
+
+</div>
+
+
+<p align="justify" style="text-indent:0pt;">* is the convolution
+operation, and <i>h<sub>1</sub></i>, <i>h<sub>2</sub></i> and <i>h<sub>3</sub></i>
+are the spatial domain representations of <i>H</i>1, <i>H</i>2 and <i>H</i>3, respectively. The 3D image is first filtered using a bandpass
+filter <img width=10 height=19
+src="001-JMTA_files/image010.png"> such as Gaussian,
+Gabor, and Log-Gabor filters. We used an isotropic (no orientation selectivity)
+log-Gabor filter as defined by Eq. (7) as such filter can be designed with arbitrary bandwidth and
+the bandwidth can be optimised to produce a filter with minimal spatial extent[18] . </p>
+
+
+<div align=center>
+
+
+<table class=MsoTableGrid border=0 cellspacing=0 cellpadding=0 width="100%"
+ style='width:100.0%;border-collapse:collapse;border:none'>
+ <tr>
+  <td width="100%" style='width:91.46%;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><img src="001-JMTA_files/image011.png" class="img"></p>
+  </td>
+  <td width="10%" style='width:8.54%;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=right style='text-align:right'>(7)</p>
+  </td>
+ </tr>
+</table>
+
+
+</div>
+
+
+<p align="justify" style="text-indent:0pt;">where <img width=19 height=19 src="001-JMTA_files/image012.png"> is the filter's centre frequency,  parameter <i>k</i> controls the
+bandwidth of the filter. Fig. 1 illustrates the
+monogenic components of a sample video frame.</p>
+
+<p align="justify" style="text-indent:19.85pt;">The
+monogenic signal can also be represented in the same form as 1D analytic
+signal:</p>
+
+<div align=center>
+
+
+<table class=MsoTableGrid border=0 cellspacing=0 cellpadding=0 width="100%"
+ style='width:100.0%;border-collapse:collapse;border:none'>
+ <tr>
+  <td width="100%" style='width:91.46%;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><img src="001-JMTA_files/image013.png" class="img"></p>
+  </td>
+  <td width="10%" style='width:8.54%;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=right style='text-align:right'>(8)</p>
+  </td>
+ </tr>
+</table>
+
+
+</div>
+
+
+<p align="justify" style="text-indent:0pt;">where the even and odd filter
+response are define as follows:</p>
+
+<div align=center>
+
+
+<table class=MsoTableGrid border=0 cellspacing=0 cellpadding=0 width="100%"
+ style='width:100.0%;border-collapse:collapse;border:none'>
+ <tr>
+  <td width="100%" style='width:91.46%;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><img src="001-JMTA_files/image014.png" class="img"></p>
+  </td>
+  <td width="10%" style='width:8.54%;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=right style='text-align:right'>(9)</p>
+  </td>
+ </tr>
+</table>
+
+
+</div>
+
+<div align=center>
+
+
+<table class=MsoTableGrid border=0 cellspacing=0 cellpadding=0 width="100%"
+ style='width:100.0%;border-collapse:collapse;border:none'>
+ <tr>
+  <td width="100%" style='width:91.46%;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><img src="001-JMTA_files/image015.png" class="img"></p>
+  </td>
+  <td width="10%" style='width:8.54%;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=right style='text-align:right'>(10)</p>
+  </td>
+ </tr>
+</table>
+
+
+</div>
+
+
+<p align="justify" style="text-indent:19.85pt;">With
+the additions, the 3D monogenic signal can be used for feature extraction.</p><br />
+
+
+<figure>
+<img src="001-JMTA_files/image016.png" class="img"/>
+
+<figcaption>
+Figure 1. Illustration of the
+monogenic components for one sample image of a video sequence; (a) Original
+sample frame; (b) First monogenic component (f1); (c) Second monogenic
+component (f2); (d) Third monogenic component (f3); (e) Forth monogenic component
+(f4).</figcaption>
+</figure>
+<br>
+
+<h2> 3. Methodology </h2>
+
+<p align="justify" style="text-indent:19.85pt;">To
+recognize facial expressions from video sequences, a set of features that best
+describe the facial muscle changes during an expression is required. Two
+complementary feature sets are proposed in this study: Spatio-Temporal
+Histogram of Local Phase (STHLP) and Spatio-Temporal Histogram of Local Orientation (STHLO). The final feature set is formed by concatenating both
+STHLP and STHLO which we named Local Phase-Local Orientation (LPLO).</p>
+
+<h4> 3.1. Spatio-Temporal Histogram of Local Phase (STHLP) </h4>
+
+<p align="justify" style="text-indent:19.85pt;">The
+local energy and local phase of the 3D monogenic signal given by Eq. (8) is
+computed as follows:</p>
+
+
+<div align=center>
+
+
+<table class=MsoTableGrid border=0 cellspacing=0 cellpadding=0 width="100%"
+ style='width:100.0%;border-collapse:collapse;border:none'>
+ <tr>
+  <td width="100%" style='width:91.46%;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><img src="001-JMTA_files/image017.png" class="img"></p>
+  </td>
+  <td width="10%" style='width:8.54%;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=right style='text-align:right'>(11)</p>
+  </td>
+ </tr>
+</table>
+
+
+</div>
+
+
+<div align=center>
+
+
+<table class=MsoTableGrid border=0 cellspacing=0 cellpadding=0 width="100%"
+ style='width:100.0%;border-collapse:collapse;border:none'>
+ <tr>
+  <td width="100%" style='width:91.46%;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><img src="001-JMTA_files/image018.png" class="img"></p>
+  </td>
+  <td width="10%" style='width:8.54%;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=right style='text-align:right'>(12)</p>
+  </td>
+ </tr>
+</table>
+
+
+</div>
+
+
+<p align="justify" style="text-indent:0pt;">where <i>E</i>
+and <i>Ph</i> denote local energy and phase respectively. <img width=52 height=19 src="001-JMTA_files/image019.png"> and<img width=49 height=19 src="001-JMTA_files/image020.png"> are even and odd parts of the monogenic signal.</p>
+
+<p align="justify" style="text-indent:19.85pt;">In
+this paper, a novel local volumetric feature is proposed to describe the local
+regions of a video sequence.  Each pixel of a video
+frame is encoded by a phase angle. To construct a weighted histogram of local
+phase, the phase is quantized into equal sized bins. Energy of each pixel is
+then used as a vote to the corresponding phase bin. Fig. 2a shows the image of energy
+of a sample video frame. The votes belonging to the
+same bin are accumulated over local spatio-temporal regions that we call <i>cells</i>.
+To reduce the noise, only the pixels that have energy more than a pre-defined
+threshold can participate in the voting. The next step is grouping cells into
+larger spatial segments named blocks. Each block descriptor is composed by
+concatenating all the cell histograms within that block. . The block histogram
+contrast normalization is then applied to get a coherent description. The final descriptor of the frame is then obtained by
+concatenating all the normalized block histograms of that frame.</p>
+
+<p align="justify" style="text-indent:19.85pt;">It is worth noting that our proposed spatio-temporal descriptor is
+able to handle different length of the video sequence. It can also support
+video segments of varying lengths. </p>
+
+<h4> 3.2. Spatio-Temporal Histogram of Local Orientation (STHLO) </h4>
+
+<p align="justify" style="text-indent:19.85pt;">We consider the
+local orientation as complementary information to describe the local structures
+of the video sequence. Each pixel orientation of the sequenced images is
+described by two angles as follows:</p>
+
+
+<div align=center>
+
+
+<table class=MsoTableGrid border=0 cellspacing=0 cellpadding=0 width="100%"
+ style='width:100.0%;border-collapse:collapse;border:none'>
+ <tr>
+  <td width="100%" style='width:91.46%;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><img src="001-JMTA_files/image021.png" class="img"></p>
+  </td>
+  <td width="10%" style='width:8.54%;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=right style='text-align:right'>(13)</p>
+  </td>
+ </tr>
+</table>
+
+
+</div>
+
+
+
+<div align=center>
+
+
+<table class=MsoTableGrid border=0 cellspacing=0 cellpadding=0 width="100%"
+ style='width:100.0%;border-collapse:collapse;border:none'>
+ <tr>
+  <td width="100%" style='width:91.46%;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><img src="001-JMTA_files/image022.png" class="img"></p>
+  </td>
+  <td width="10%" style='width:8.54%;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=right style='text-align:right'>(14)</p>
+  </td>
+ </tr>
+</table>
+
+
+</div>
+
+
+<p align="justify" style="text-indent:19.85pt;">To construct a
+weighted histogram of orientations similar to STHLP, <img
+width=9 height=19 src="001-JMTA_files/image023.png">
+are quantized into equally sized bins. For the vote's weight, pixel contribution can be used
+as the magnitude of the orientation vector given by the
+following equations: </p>
+
+<div align=center>
+
+
+<table class=MsoTableGrid border=0 cellspacing=0 cellpadding=0 width="100%"
+ style='width:100.0%;border-collapse:collapse;border:none'>
+ <tr>
+  <td width="100%" style='width:91.46%;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><img src="001-JMTA_files/image025.png" class="img"></p>
+  </td>
+  <td width="10%" style='width:8.54%;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=right style='text-align:right'>(15)</p>
+  </td>
+ </tr>
+</table>
+
+
+</div>
+
+
+<div align=center>
+
+
+<table class=MsoTableGrid border=0 cellspacing=0 cellpadding=0 width="100%"
+ style='width:100.0%;border-collapse:collapse;border:none'>
+ <tr>
+  <td width="100%" style='width:91.46%;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><img src="001-JMTA_files/image026.png" class="img"></p>
+  </td>
+  <td width="10%" style='width:8.54%;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=right style='text-align:right'>(16)</p>
+  </td>
+ </tr>
+</table>
+
+
+</div>
+
+
+
+<p align="justify" style="text-indent:0pt;">where<img width=46 height=19 src="001-JMTA_files/image027.png">is used to vote the bins related to <img
+width=9 height=19 src="001-JMTA_files/image023.png"> and
+<img width=42 height=21 src="001-JMTA_files/image028.png"> for voting the bins corresponding to <img
+width=11 height=19 src="001-JMTA_files/image024.png">.
+The voting components (<img width=43 height=19 src="001-JMTA_files/image029.png">and <img width=44 height=21 src="001-JMTA_files/image030.png">) are depicted in Fig. 2b and Fig. 2c respectively for a sample
+video frame. Such proposed method is efficient as it
+utilizes the magnitude information already computed previously. This is
+different from the common approach used is to compute the local orientation,
+based on the output of ensembles of oriented filters like Prewitt, Sobel, and
+Laplace at differing orientation [19-22]. </p>
+
+<figure>
+<img src="001-JMTA_files/image031.jpg" class="img"/>
+
+<figcaption>
+Figure 2. Illustration of the components
+used to vote the phase and orientation bins for one sample image of a video
+sequence; (a) Energy signal for voting the phase bins; (b) <img width=37 height=17 src="001-JMTA_files/image032.png"><span
+lang=EN-US style='font-size:11.0pt'>for voting the bins related to <img width=16 height=17 src="001-JMTA_files/image033.png">(c) <img width=38 height=19 src="001-JMTA_files/image034.png">for voting the bins corresponding to <img
+width=10 height=17 src="001-JMTA_files/image035.png">.</figcaption>
+</figure>
+<br>
+
+<H4> 3.3. Multi-scale Analysis </H4>
+
+<p align="justify" style="text-indent:19.85pt;">Multi-scale or multi-resolution analysis of facial features has been
+used in many research works [23, 24]. Since some facial features are detectable at a certain scale and may
+not be as distinguishable at other scales, it is more reliable to extract the
+features at various scales. The multi-resolution representation can be
+achieved by varying the wavelengths of
+the bandpass filter in Eq. (7). Finally, the LPLO is obtained from the
+combination of the features at different scales. Fig.3 illustrates how the
+energy component defined by Eq. (10) varies by changing the filter scale.</p>
+
+<figure>
+<img src="001-JMTA_files/image036.png" class="img"/>
+
+<figcaption>
+Figure 3. Illustration of the energy component
+at different scales. The scale of the bandpass filter is increased from (a) to
+(d).</figcaption>
+</figure>
+<br>
+
+
+<h2> 4. Results and Discussion </h2>
+
+<p align="justify" style="text-indent:19.85pt;">We evaluated our proposed method on two publicly
+available databases for facial expression recognition. The first is Cohn-Kanade
+(CK<sup>+</sup>) [25] dataset consisting of acted emotional states under
+controlled environment. The second is the Audio Visual Emotion Challenge (AVEC
+2011) [26] which contains spontaneous emotional
+states in natural settings.</p>
+
+<h4>4.1. Cohn-Kanade Database </h4>
+
+<p align="justify" style="text-indent:19.85pt;">CK<sup>+</sup>includes 593 video sequences
+recorded from 123 university students. The subjects were asked to express a
+series of 23 facial displays including single or combined action units. Six of
+the displays were based on descriptions of prototype basic emotions (joy,
+surprise, anger, fear, disgust, and sadness). For our experiment, 309 sequences
+from the dataset which have been labeled with one of the six basic emotions are
+used. Other sequences may be labeled as "contempt" which is not our objective
+or may have no label. Fig. 4 shows the sample images of a subject expressing
+six basic emotions<span style='color:red'> </p>
+
+<p align="justify" style="text-indent:19.85pt;">To
+evaluate our proposed approach, Leave-One subject-Out (LOO) cross validation is
+used. In this method, there is no information of the same subject in both the
+training and test samples and consequently, our experiments will be subject
+independent. To classify the samples into six basic emotions, a Support Vector
+Machine (SVM) with polynomial kernel function is used. SVM has been originally
+proposed as a binary classifier, and subsequently extended to multi-class
+problems [27]. For our database, we used one-against-all technique that
+constructs 6 binary SVM classifiers to categorize each emotion against all the
+others. The final outcome is obtained using majority voting. </p>
+
+<p align="justify" style="text-indent:19.85pt;">We also applied a preprocessing stage before feature extraction. The
+images were aligned to have a constant distance between the two eyes, and then
+rotated to line up the eye coordinates horizontally. Finally, the faces were
+cropped into a rectangle of size 100&times;100. Since our
+method is robust to illumination variation, we do not require illumination
+normalization at the pre-processing step.</p>
+
+<figure>
+<img src="001-JMTA_files/image037.jpg" class="img"/>
+
+<figcaption>
+Figure 4. Example of basic
+emotions from CK<sup>+ </sup>database. Each image is the last frame of a video
+clip that shows the most expressive face.</figcaption>
+</figure>
+<br>
+
+
+<p align="justify" style="text-indent:19.85pt;">The next experiment was carried out using different log-Gabor
+parameters to check the effect of filter wavelength and bandwidth on the
+classification performance. Our experimental results show that the bandwidth of
+0.75 and 3 scales of the bandpass filter with
+wavelengths of {4, 8, 12} are superior to other settings in term of detection rate. The
+results are shown in Table 1 and Table 2 respectively. These parameters are
+then fixed in our subsequent experiments. </p>
+
+<p align="justify" style="text-indent:19.85pt;">The next
+experiment was conducted on different number of blocks and cells to compare the
+length of features and the detection rate. Table 3 tabulates the results
+obtained. Based on this experiment, partitioning the data into 32 blocks
+(4&times;4&times;2) and 9 cells (3&times;3&times;1) outperforms the other settings in term of
+classification accuracy. </p>
+
+<p align="justify" style="text-indent:19.85pt;">We also
+evaluated both feature sets (STHLP and STHLO) individually and in combination
+to validate whether they are indeed complementary descriptors. The combined
+feature is named LPLO in this table. The results of our evaluation are
+summarized in Table 4. The detection rate of the combined features is better
+than each feature set individually.</p>
+
+<p align="justify" style="text-indent:19.85pt;">We have also
+presented the results of LOO cross validation as a confusion matrix in Table 5
+to analyze the performance of our proposed method on each expression. It can be
+seen that the detection rate of two expressions "fear" and "sadness" are not as
+high as the other expressions.</p>
+
+<p align="justify" style="text-indent:19.85pt;">In the CK<sup>+</sup> database, there are limited
+samples with illumination and skin colour variations. In addition, the
+variation is only minor and not sufficient to test the effect of illumination
+variation on our proposed descriptor. As such, we have recorded an additional 15
+video sequences of happy and surprize expressions under different illumination
+conditions. We used the recorded samples to evaluate our classifier trained
+using the CK<sup>+</sup> database (which has only minor illumination
+variation). Our proposed method is able to detect the true label for 14 out of
+the total 15 sequences (93.33% accuracy). Fig. 5 shows the recorded signals for
+happy expression, and a sample face of each sequence together with the
+recognition results. The reason one of the sequences cannot be detected is due
+to the strong contrast appearing at the mouth region causing the feature at
+part of the mouth with much darker illumination not to be properly obtained.</p>
+
+<p align="justify" style="text-indent:19.85pt;">Table 6 presents
+a comparison of our proposed approach to the other reported methods in the
+literatures that also used the CK<sup>+ </sup>database. Brief information of
+each method including the number of subjects, dynamic or static process,
+evaluation measurement, and classification accuracy is included. It is noted
+that since the experimental setting used in these approaches is not identical,
+it is difficult to compare quantitatively the performance of listed approaches.
+However, it is still useful to compare them in relative sense to know the
+strengths and weaknesses of each method. Our experiment was done using the
+largest number of subjects, yet the result is comparable to the best approach,
+LBPTOP [10]. However, our approach is an order faster
+than LBPTOP. The computational
+time of our proposed feature extraction for one subject is around 0.50 sec
+while LBPTOP requires 5.5 sec.</p>
+
+<div class="widetable">
+<table>
+<caption>Table Table 1. Effect of log-Gabor bandwidth on
+classification accuracy for CK<sup>+ </sup>database. The results are based on
+50 blocks (5&times;5&times;2), and 9 cells (3&times;3&times;1).</caption>
+<thead>
+ <tr>
+  <td style='border:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'><p class=MsoNormal align=center style='text-align:center;'><img width=20
+  height=40 src="001-JMTA_files/image038.png"></p>
+  </td>
+  <td style='border:solid windowtext 1.0pt;border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'><b>Detection Rate (%)</b></p>
+  </td>
+ </tr>
+ </thead>
+ <tbody>
+ <tr style='height:5.65pt'>
+  <td style='border:solid windowtext 1.0pt;border-top:none;padding:0cm 5.4pt 0cm 5.4pt;
+  height:5.65pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>0.55</p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:5.65pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>91.94</p>
+  </td>
+ </tr>
+ <tr style='height:5.6pt'>
+  <td style='border:solid windowtext 1.0pt;border-top:none;padding:0cm 5.4pt 0cm 5.4pt;
+  height:5.6pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>0.65</p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:5.6pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>92.24</p>
+  </td>
+ </tr>
+ <tr>
+  <td style='border:solid windowtext 1.0pt;border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>0.75</p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>94.58</p>
+  </td>
+ </tr>
+ <tr style='height:5.65pt'>
+  <td style='border:solid windowtext 1.0pt;border-top:none;padding:0cm 5.4pt 0cm 5.4pt;
+  height:5.65pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>0.85</p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:5.65pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>93.47</p>
+  </td>
+ </tr>
+ </tbody>
+</table>
+
+</div>
+<Br />
+
+<div class="widetable">
+<table>
+<caption>Table 2. Effect of log-Gabor scales on classification
+accuracy for CK<sup>+ </sup>database. The results are based on 50 blocks
+(5&times;5&times;2), and 9 cells (3&times;3&times;1).</caption>
+<thead>
+ <tr>
+  <td style='border:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'><b># Scales</b></p>
+  </td>
+  <td style='border:solid windowtext 1.0pt;border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'><b>Wavelength</b></p>
+  </td>
+  <td style='border:solid windowtext 1.0pt;border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'><b>Detection Rate</b><b>(%)</b></p>
+  </td>
+ </tr>
+ </thead>
+ <tbody>
+ <tr style='height:6.55pt'>
+  <td style='border:solid windowtext 1.0pt;border-top:none;padding:0cm 5.4pt 0cm 5.4pt;
+  height:6.55pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>2</p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:6.55pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>{4, 8}</p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:6.55pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>91.24</p>
+  </td>
+ </tr>
+ <tr style='height:7.2pt'>
+  <td style='border:solid windowtext 1.0pt;border-top:none;padding:0cm 5.4pt 0cm 5.4pt;
+  height:7.2pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>2</p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:7.2pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>{8, 16}</p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:7.2pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>92.47</p>
+  </td>
+ </tr>
+ <tr style='height:6.1pt'>
+  <td style='border:solid windowtext 1.0pt;border-top:none;padding:0cm 5.4pt 0cm 5.4pt;
+  height:6.1pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>3</p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:6.1pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>{4, 8, 12}</p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:6.1pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>94.58</p>
+  </td>
+ </tr>
+ <tr style='height:9.25pt'>
+  <td style='border:solid windowtext 1.0pt;border-top:none;padding:0cm 5.4pt 0cm 5.4pt;
+  height:9.25pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>3</p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:9.25pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>{8, 12, 16}</p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:9.25pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>93.22</p>
+  </td>
+ </tr>
+ <tr style='height:8.15pt'>
+  <td style='border:solid windowtext 1.0pt;border-top:none;padding:0cm 5.4pt 0cm 5.4pt;
+  height:8.15pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>4</p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:8.15pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>{2, 8, 12, 16}</p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:8.15pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>92.86</p>
+  </td>
+ </tr>
+ <tr style='height:5.65pt'>
+  <td style='border:solid windowtext 1.0pt;border-top:none;padding:0cm 5.4pt 0cm 5.4pt;
+  height:5.65pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>4</p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:5.65pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>{8, 12, 16, 32}</p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:5.65pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>91.43</p>
+  </td>
+ </tr>
+ </tbody>
+</table>
+
+</div>
+
+<br />
+
+<div class="widetable">
+<table>
+<caption>Table 3. Comparison on number of blocks and number
+of cells on classification accuracy.</caption>
+<thead>
+ <tr>
+  <td style='border:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;
+  height:3.75pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'><b>No. Blocks</b></p>
+  </td>
+  <td style='border:solid windowtext 1.0pt;border-left:none;padding:0cm 5.4pt 0cm 5.4pt;
+  height:3.75pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'><b>No. cells</b></p>
+  </td>
+  <td style='border:solid windowtext 1.0pt;border-left:none;padding:0cm 5.4pt 0cm 5.4pt;
+  height:3.75pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'><b>No. features</b></p>
+  </td>
+  <td style='border:solid windowtext 1.0pt;border-left:none;padding:0cm 5.4pt 0cm 5.4pt;
+  height:3.75pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'><b>Detection rate (%)</b></p>
+  </td>
+ </tr>
+ </thead>
+ <tbody>
+ <tr style='height:3.75pt'>
+  <td style='border:solid windowtext 1.0pt;border-top:none;padding:0cm 5.4pt 0cm 5.4pt;
+  height:3.75pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>3&times;3&times;2</p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:3.75pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>2&times;2&times;1</p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:3.75pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>5184</p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:3.75pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>87.41</p>
+  </td>
+ </tr>
+ <tr>
+  <td style='border:solid windowtext 1.0pt;border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>3&times;3&times;2</p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>3&times;3&times;1</p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>11664</p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>80.64</p>
+  </td>
+ </tr>
+ <tr style='height:6.1pt'>
+  <td style='border:solid windowtext 1.0pt;border-top:none;padding:0cm 5.4pt 0cm 5.4pt;
+  height:6.1pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>4&times;4&times;2</p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:6.1pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>2&times;2&times;1</p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:6.1pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>9216</p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:6.1pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>94.16</p>
+  </td>
+ </tr>
+ <tr style='height:5.45pt'>
+  <td style='border:solid windowtext 1.0pt;border-top:none;padding:0cm 5.4pt 0cm 5.4pt;
+  height:5.45pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>4&times;4&times;2</p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:5.45pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>3&times;3&times;1</p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:5.45pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>20736</p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:5.45pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>94.58</p>
+  </td>
+ </tr>
+ <tr>
+  <td style='border:solid windowtext 1.0pt;border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>5&times;5&times;2</p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>2&times;2&times;1</p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>14400</p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>93.28</p>
+  </td>
+ </tr>
+ <tr>
+  <td style='border:solid windowtext 1.0pt;border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>5&times;5&times;2</p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>3&times;3&times;1</p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>32400</p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>93.57</p>
+  </td>
+ </tr>
+ </tbody>
+</table>
+
+</div>
+
+<br />
+
+<div class="widetable">
+<table>
+<caption>Table 4. Comparison of STHLP, STHLO, and combined features.</caption>
+<thead>
+ <tr>
+  <td style='border:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'><b>Descriptor</b></p>
+  </td>
+  <td style='border:solid windowtext 1.0pt;border-left:none;padding:0cm 5.4pt 0cm 5.4pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'><b>Detection rate (%)</b></p>
+  </td>
+ </tr>
+ </thead>
+ <tbody>
+ <tr style='height:11.6pt'>
+  <td style='border:solid windowtext 1.0pt;border-top:none;padding:0cm 5.4pt 0cm 5.4pt;
+  height:11.6pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>STHLP</p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:11.6pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>91.23</p>
+  </td>
+ </tr>
+ <tr style='height:15.0pt'>
+  <td style='border:solid windowtext 1.0pt;border-top:none;padding:0cm 5.4pt 0cm 5.4pt;
+  height:15.0pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>STHLO</p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>89.12</p>
+  </td>
+ </tr>
+ <tr style='height:10.1pt'>
+  <td style='border:solid windowtext 1.0pt;border-top:none;padding:0cm 5.4pt 0cm 5.4pt;
+  height:10.1pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>Combined feature(LPLO)</p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:10.1pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>94.58</p>
+  </td>
+ </tr>
+ </tbody>
+</table>
+
+</div>
+
+<br />
+
+<figure>
+
+<figcaption>
+Table 5. Confusion matrix for six basic
+emotions. </figcaption>
+
+<img src="001-JMTA_files/table5.png" class="img"/>
+
+
+</figure>
+<br>
+
+<div class="widetable">
+<table>
+<caption>Table 6. Comparison of other approaches on CK<sup>+</sup> database.</caption>
+<thead>
+ <tr>
+  <td style='border:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;
+  height:18.0pt'>
+  <p class=MsoNormal style='text-indent:0cm'><b>Method</b></p>
+  </td>
+  <td style='border:solid windowtext 1.0pt;border-left:none;padding:0cm 5.4pt 0cm 5.4pt;
+  height:18.0pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'><b>#Subject</b></p>
+  </td>
+  <td style='border:solid windowtext 1.0pt;border-left:none;padding:0cm 5.4pt 0cm 5.4pt;
+  height:18.0pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'><b>#Sequence</b></p>
+  </td>
+  <td style='border:solid windowtext 1.0pt;border-left:none;padding:0cm 5.4pt 0cm 5.4pt;
+  height:18.0pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'><b>Dynamic</b></p>
+  </td>
+  <td style='border:solid windowtext 1.0pt;border-left:none;padding:0cm 5.4pt 0cm 5.4pt;
+  height:18.0pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'><b>Evaluation</b></p>
+  </td>
+  <td style='border:solid windowtext 1.0pt;border-left:none;padding:0cm 5.4pt 0cm 5.4pt;
+  height:18.0pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'><b>Recognition Rate (%)</b></p>
+  </td>
+ </tr>
+ </thead>
+ <tbody>
+ <tr style='height:18.0pt'>
+  <td style='border:solid windowtext 1.0pt;border-top:none;padding:0cm 5.4pt 0cm 5.4pt;
+  height:18.0pt'>
+  <p class=MsoNormal style='text-indent:0cm'>LBP+SVM [28]</p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:18.0pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>96</p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:18.0pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>320</p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:18.0pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>N</p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:18.0pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>10-fold</p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:18.0pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>88.4</p>
+  </td>
+ </tr>
+ <tr style='height:32.25pt'>
+  <td style='border:solid windowtext 1.0pt;border-top:none;padding:0cm 5.4pt 0cm 5.4pt;
+  height:32.25pt'>
+  <p class=MsoNormal style='text-indent:0cm'>Gabor+adaboost+SVM
+  [29]</p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:32.25pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>90</p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:32.25pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>313</p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:32.25pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>N</p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:32.25pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>LOO</p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:32.25pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>93.8</p>
+  </td>
+ </tr>
+ <tr style='height:22.5pt'>
+  <td style='border:solid windowtext 1.0pt;border-top:none;padding:0cm 5.4pt 0cm 5.4pt;
+  height:22.5pt'>
+  <p class=MsoNormal style='text-indent:0cm'>Optical flow+HMM [30]</p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:22.5pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>97</p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:22.5pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>-</p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:22.5pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>Y</p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:22.5pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>5-fold</p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:22.5pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>90.9</p>
+  </td>
+ </tr>
+ <tr style='height:13.5pt'>
+  <td style='border:solid windowtext 1.0pt;border-top:none;padding:0cm 5.4pt 0cm 5.4pt;
+  height:13.5pt'>
+  <p class=MsoNormal style='text-indent:0cm'>Multistream NN [31]</p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:13.5pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>90</p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:13.5pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>284</p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:13.5pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>Y</p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:13.5pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>-</p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:13.5pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>93.66</p>
+  </td>
+ </tr>
+ <tr style='height:12.75pt'>
+  <td style='border:solid windowtext 1.0pt;border-top:none;padding:0cm 5.4pt 0cm 5.4pt;
+  height:12.75pt'>
+  <p class=MsoNormal style='text-indent:0cm'>Geometricalfeatures+NN
+  [32]</p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>97</p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>375</p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>N</p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>-</p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>93.8</p>
+  </td>
+ </tr>
+ <tr style='height:17.65pt'>
+  <td style='border:solid windowtext 1.0pt;border-top:none;padding:0cm 5.4pt 0cm 5.4pt;
+  height:17.65pt'>
+  <p class=MsoNormal style='text-indent:0cm'>LBPTOP [10]</p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:17.65pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>97</p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:17.65pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>375</p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:17.65pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>Y</p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:17.65pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>10-fold</p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:17.65pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>96.26</p>
+  </td>
+ </tr>
+ <tr style='height:7.1pt'>
+  <td style='border:solid windowtext 1.0pt;border-top:none;padding:0cm 5.4pt 0cm 5.4pt;
+  height:7.1pt'>
+  <p class=MsoNormal style='text-indent:0cm'>Proposed method (LPLO)</p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:7.1pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>118</p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:7.1pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>309</p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:7.1pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>Y</p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:7.1pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>LOO</p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:7.1pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>94.58</p>
+  </td>
+ </tr>
+ </tbody>
+</table>
+
+</div>
+
+<br />
+
+<figure>
+<img src="001-JMTA_files/image039.jpg" class="img"/>
+
+<figcaption>
+Figure 5.
+Variation of illumination; (a) Recorded samples of happy expression under
+different illumination conditions; (b) Sample face of each sequence; (c)
+Classification results.</figcaption>
+</figure>
+<br>
+
+<h4>4.2. AVEC 2011 Database </h4>
+
+<p align="justify" style="text-indent:19.85pt;">We also evaluated our proposed approach using the AVEC 2011 database
+which is more challenging as it is captured in a natural setting. This database
+consist of 95 video recorded at 49.979 frames per
+second at a spatial resolution of 780&times;580 pixels. The binary labels along the
+four affective dimensions (activation, expectation, power and valence) are
+provided for each video frame. The data is divided into 3 subsets: training,
+development, and testing. The training set consists of 31 records, while the
+development set (for validation of the model parameters) consists of 32 records
+and the test set consists of 11 video sequences.</p>
+
+<p align="justify" style="text-indent:19.85pt;">As  described in the challenge baselines [26], because of the large
+amount of data (more than 1.3 million frames), we sampled the videos using a
+constant sampling rate. We segmented every 60 frames of each video with 20%
+overlap and then sampled it with a down sampling rate of 6. So each volume data
+includes 10 frames. Due to memory constrains, we processed only 1550 frames of
+each video for the training and development sets (total of 48050 frames for
+training and 49600 frames for development).      </p>
+
+<p align="justify" style="text-indent:19.85pt;">The information describing the position of the face and eyes are
+provided in the database. The pre-processing stage includes only normalizing
+the faces to have a constant distance between the two eyes.</p>
+
+<p align="justify" style="text-indent:19.85pt;">Table 5 shows the recognition results of our approach compared to
+the other reported results. We just reported the weighted accuracy of the
+methods which is the correctly detected samples divided by the total number of
+samples. The average results obtained by our method are above the baseline
+results and also [34], [35] for the development subset. For test subset, we
+achieved the best average accuracy among all competitors. This means that the
+proposed descriptor can be effective for natural and spontaneous emotion
+detection in natural setting.</p>
+
+<div class="widetable">
+<table>
+<caption>Table 7. Comparison of the detection rate
+for the AVEC 2011 database.A
+stands for activation, E for expectancy, P for power, and V for valence.</caption>
+<thead> </thead>
+ <tbody>
+ <tr>
+  <td rowspan=2 style='border:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-indent:0cm'><b>Reference</b></p>
+  </td>
+  <td colspan=5 style='border:solid windowtext 1.0pt;border-left:none;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'><b>Development</b></p>
+  </td>
+  <td colspan=5 style='border:solid windowtext 1.0pt;border-left:none;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'><b>Test</b></p>
+  </td>
+ </tr>
+
+
+ <tr>
+  <td style='border-top:none;border-left:solid windowtext 1.0pt;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'><b>A</b></p>
+  </td>
+  <td style='border:solid windowtext 1.0pt;border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'><b>E</b></p>
+  </td>
+  <td style='border:solid windowtext 1.0pt;border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'><b>P</b></p>
+  </td>
+  <td style='border:solid windowtext 1.0pt;border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'><b>V</b></p>
+  </td>
+  <td style='border:solid windowtext 1.0pt;border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'><b>Average</b></p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'><b>A</b></p>
+  </td>
+  <td width=40 style='width:30.05pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'><b>E</b></p>
+  </td>
+  <td width=40 style='width:30.05pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'><b>P</b></p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'><b>V</b></p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'><b>Average</b></p>
+  </td>
+ </tr>
+ <tr>
+  <td style='border:solid windowtext 1.0pt;border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-indent:0cm'>Baseline [26]</p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>60.2</p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>58.3</p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>56.3</p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>63.6</p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>59.6</p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>42.2</p>
+  </td>
+  <td width=40 style='width:30.05pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>53.6</p>
+  </td>
+  <td width=40 style='width:30.05pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>36.4</p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>52.5</p>
+  </td>
+  <td style='border-top:solid windowtext 1.0pt;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>46.2</p>
+  </td>
+ </tr>
+ <tr>
+  <td style='border:solid windowtext 1.0pt;border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-indent:0cm'>[33]</p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>81.7</p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>73.1</p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>73.3</p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>73.5</p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>75.4</p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>65.5</p>
+  </td>
+  <td width=40 style='width:30.05pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>61.7</p>
+  </td>
+  <td width=40 style='width:30.05pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>47.1</p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>69.8</p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>61.0</p>
+  </td>
+ </tr>
+ <tr style='height:17.65pt'>
+  <td style='border:solid windowtext 1.0pt;border-top:none;padding:0cm 5.4pt 0cm 5.4pt;
+  height:17.65pt'>
+  <p class=MsoNormal style='text-indent:0cm'>[34]</p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:17.65pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>69.3</p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:17.65pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>65.6</p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:17.65pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>59.9</p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:17.65pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>67.8</p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:17.65pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>65.6</p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:17.65pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>56.5</p>
+  </td>
+  <td width=40 style='width:30.05pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:17.65pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>59.7</p>
+  </td>
+  <td width=40 style='width:30.05pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:17.65pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>48.5</p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:17.65pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>59.2</p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:17.65pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>55.9</p>
+  </td>
+ </tr>
+ <tr style='height:14.25pt'>
+  <td style='border:solid windowtext 1.0pt;border-top:none;padding:0cm 5.4pt 0cm 5.4pt;
+  height:14.25pt'>
+  <p class=MsoNormal style='text-indent:0cm'>[35]</p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:14.25pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>58.2</p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:14.25pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>53.5</p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:14.25pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>53.7</p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:14.25pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>53.2</p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:14.25pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>54.65</p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:14.25pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>56.9</p>
+  </td>
+  <td width=40 style='width:30.05pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:14.25pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>47.5</p>
+  </td>
+  <td width=40 style='width:30.05pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:14.25pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>47.3</p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:14.25pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>55.5</p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:14.25pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>51.8</p>
+  </td>
+ </tr>
+ <tr style='height:10.5pt'>
+  <td style='border:solid windowtext 1.0pt;border-top:none;padding:0cm 5.4pt 0cm 5.4pt;
+  height:10.5pt'>
+  <p class=MsoNormal style='text-indent:0cm'>Our method</p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:10.5pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>65.3</p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:10.5pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>68.4</p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:10.5pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>55.5</p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:10.5pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>55.5</p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:10.5pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>61.2</p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:10.5pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>75.6</p>
+  </td>
+  <td width=40 style='width:30.05pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:10.5pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>59.8</p>
+  </td>
+  <td width=40 style='width:30.05pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:10.5pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>56.9</p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:10.5pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>56.9</p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:10.5pt'>
+  <p class=MsoNormal align=center style='text-align:center;text-indent:0cm'>62.3</p>
+  </td>
+ </tr>
+ </tbody>
+</table>
+
+</div>
+
+<Br />
+
+<H2> 5. Conclusion </H2>
+
+<p align="justify" style="text-indent:19.85pt;">In this paper,
+we proposed a novel local descriptor to analyze dynamic facial expression from
+video sequences. Our novel descriptor composed of two feature sets, STHLP and
+STHLO, to describe the local phase and orientation information of the
+structures in the images. Our proposed phase-based descriptor provides a
+measure that is independent to the signal magnitude, making it robust to
+illumination variations. Our experimental results prove that the combined local
+phase and local energy model is a useful approach that improves the reliability
+of emotion recognition system in real world application in the presence of
+scale variation and illumination variations. </p>
+
+<H2> Acknowledgment </H2>
+
+
+<p align="justify" style="text-indent:19.85pt;">This research is
+supported by the Agency for Science, Technology and Research (A*STAR),
+Singapore.</p>
+
+<img src="images/line.png" width="100&#37;" height="1" />
+<H2><a name="references">References</a></H2>
+
+<p>[1] C. Shan, S. Gong, and P. W. McOwan, "Facial expression recognition based on Local Binary Patterns: A comprehensive study," Image and Vision Computing, vol. 27, pp. 803-816, 2009. <a href="http://dx.doi.org/10.1016/j.imavis.2008.08.005" target="_blank">View Article</a></p>
+
+
+<p>[2] D. H. Kim, S. U. Jung, and M. J. Chung, "Extension of cascaded simple feature based face detection to facial expression recognition," Pattern Recognition Letters, vol. 29, pp. 1621-1631, 2008. <a href="http://dx.doi.org/10.1016/j.patrec.2008.04.006" target="_blank">View Article</a></p>
+
+
+<p>[3] S. Bashyal and G. K. Venayagamoorthy, "Recognition of facial expressions using Gabor wavelets and learning vector quantization," Engineering Applications of Artificial Intelligence, vol. 21, pp. 1056-1064, 2008. <a href="http://dx.doi.org/10.1016/j.engappai.2007.11.010" target="_blank">View Article</a></p>
+
+
+<p>[4] W. Gu, C. Xiang, Y. V. Venkatesh, D. Huang, and H. Lin, "Facial expression recognition using radial encoding of local Gabor features and classifier synthesis," Pattern Recognition, vol. 45, pp. 80-91, 2012. <a href="http://dx.doi.org/10.1016/j.patcog.2011.05.006" target="_blank">View Article</a></p>
+
+
+<p>[5] X. Xie and K.-M. Lam, "Facial expression recognition based on shape and texture," Pattern Recognition, vol. 42, pp. 1003-1011, 2009.  <a href="http://dx.doi.org/10.1016/j.patcog.2008.08.034" target="_blank">View Article</a></p>
+
+
+<p>[6] T. Wehrle, S. Kaiser, S. Schmidt, and K. R. Scherer, "Studying the Dynamics of Emotional Expression Using  Synthesized Facial Muscle Movements," Journal o f  Personality and Social Psychology, vol. 78, pp. 105-119, 2000.  <a href="http://www.ncbi.nlm.nih.gov/pubmed/10653509" target="_blank">View Article</a></p>
+
+
+<p>[7] I. Kotsia and I. Pitas, "Facial Expression Recognition in Image Sequences Using Geometric Deformation Features and Support Vector Machines," Image Processing, , vol. 16, pp. 172-187, 2007. <a href="http://dx.doi.org/10.1109/TIP.2006.884954" target="_blank">View Article</a></p>
+
+
+<p>[8] J. F. Cohn, Z. Ambadar, and P. Ekman, "Observer-Based Measurement of Facial Expression with the Facial Action Coding System," The handbook of emotion elicitation and assessment, vol. Oxford University Press Series in Affective Science, 2005.  <a href="http://www.pitt.edu/~jeffcohn/biblio/Coan%20013%20chap13.pdf" target="_blank">View Article</a></p>
+
+
+<p>[9] S. Mingli, B. Jiajun, and C. Chun, "Expression recognition from video using a coupled hidden Markov model," 2004 IEEE Region 10 Conference, pp. 583-586 Vol. 1, 2004  <a href="http://dx.doi.org/10.1109/TENCON.2004.1414487" target="_blank">View Article</a></p>
+
+
+<p>[10] G. Zhao and M. Pietikainen, "Dynamic Texture Recognition Using Local Binary Patterns with an Application to Facial Expressions," Pattern Analysis and Machine Intelligence, vol. 29, pp. 915-928, 2007.  <a href="http://dx.doi.org/10.1109/TPAMI.2007.1110" target="_blank">View Article</a></p>
+
+
+<p>[11] Z. Yongmian and J. Qiang, "Active and dynamic information fusion for facial expression understanding from image sequences," Pattern Analysis and Machine Intelligence, vol. 27, pp. 699-714, 2005.  <a href="http://dx.doi.org/10.1109/TPAMI.2005.93" target="_blank">View Article</a></p>
+
+
+<p>[12] S. Gundimada and V. K. Asari, "A Novel Neighborhood Defined Feature Selection on Phase Congruency Images for Recognition of Faces with Extreme Variations," International Journal of Information Technology, vol. 3, 2006.  <a href="http://www.waset.org/publications/14595" target="_blank">View Article</a></p>
+
+
+<p>[13] M. Mellor and M. Brady, "Phase mutual information as a similarity measure for registration," Medical Image Analysis, vol. 9, pp. 330-343, 2005. <a href="http://dx.doi.org/10.1016/j.media.2005.01.002" target="_blank">View Article</a></p>
+
+
+<p>[14] C. Chi-Ho, J. Kittler, N. Poh, T. Ahonen, and M. Pietikainen, "(Multiscale) Local Phase Quantisation histogram discriminant analysis with score normalisation for robust face recognition," ICCV Workshops, pp. 633-640, 2009 <a href="http://dx.doi.org/10.1109/ICCVW.2009.5457642" target="_blank">View Article</a></p>
+
+
+<p>[15] M. S. Sarfraz and O. Hellwich, "Head Pose Estimation In Face Recognition Across Pose Scenarios," International Conference on Computer Vision Theory and Applications VISAPP, vol. 1, pp. 235–242, 2008. <a href="http://pdf.aminer.org/000/349/600/automated_face_pose_estimation_using_elastic_energy_models.pdf" target="_blank">View Article</a></p>
+
+
+<p>[16] I. Buciu, "Feature Extraction Through Cross-Phase Congruency For Facial Expression Analysis," International Journal of Pattern Recognition, vol. 23, pp. 617-635, 2009.  <a href="http://dx.doi.org/10.1142/S021800140900717X" target="_blank">View Article</a></p>
+
+
+<p>[17] K. Rajpoot, V. Grau, and J. A. Noble, "Local-phase based 3D boundary detection using monogenic signal and its application to real-time 3-D echocardiography images," Biomedical Imaging: From Nano to Macro, 2009, pp. 783-786.  <a href="http://dx.doi.org/" target="_blank">View Article</a></p>
+
+
+<p>[18] Y. Peng, L. Jun, Y. Xueyi, Z. Zhenquan, and L. Bin, "Iris Recognition Algorithm Using Modified Log-Gabor Filters," ICPR 2006, pp. 461-464.  <a href="http://dx.doi.org/10.1109/ISBI.2009.5193166" target="_blank">View Article</a></p>
+
+
+<p>[19] W. T. Freeman and M. Roth, "Orientation histograms for hand gesture recognition," International Workshop on Automatic Face and Gesture Recognition, 1995. <a href="http://www.merl.com/publications/docs/TR94-03.pdf" target="_blank">View Article</a></p>
+
+
+<p>[20] N. Dalal and B. Triggs, "Histograms of oriented gradients for human detection," CVPR, pp. 886-893, 2005. <a href="http://dx.doi.org/10.1109/CVPR.2005.177" target="_blank">View Article</a></p>
+
+
+<p>[21] M. Dahmane and J. Meunier, "Emotion recognition using dynamic grid-based HoG features," Automatic Face & Gesture Recognition and Workshops (FG 2011), pp. 884-888, 2011. <a href="http://dx.doi.org/10.1109/FG.2011.5771368" target="_blank">View Article</a></p>
+
+
+<p>[22] W. Jin, L. Ping, M. F. H. She, A. Kouzani, and S. Nahavandi, "Human action recognition based on Pyramid Histogram of Oriented Gradients," Systems, Man, and Cybernetics (SMC), pp. 2449-2454, 2011. <a href="http://dx.doi.org/10.1109/ICSMC.2011.6084045" target="_blank">View Article</a></p>
+
+
+<p>[23] X. Shufu, S. Shiguang, C. Xilin, and C. Jie, "Fusing Local Patterns of Gabor Magnitude and Phase for Face Recognition," Image Processing, vol. 19, pp. 1349-1361, 2010. <a href="http://dx.doi.org/10.1109/TIP.2010.2041397" target="_blank">View Article</a></p>
+
+
+<p>[24] Z. Baochang, S. Shiguang, C. Xilin, and G. Wen, "Histogram of Gabor Phase Patterns (HGPP): A Novel Object Representation Approach for Face Recognition," Image Processing, vol. 16, pp. 57-68, 2007. <a href="http://dx.doi.org/10.1109/TIP.2006.884956" target="_blank">View Article</a></p>
+
+
+<p>[25] P. Lucey, J. F. Cohn, T. Kanade, J. Saragih, Z. Ambadar, and I. Matthews, "The Extended Cohn-Kanade Dataset (CK+): A complete dataset for action unit and emotion-specified expression," Computer Vision and Pattern Recognition Workshops (CVPRW),  pp. 94-101, 2010. <a href="http://dx.doi.org/10.1109/CVPRW.2010.5543262" target="_blank">View Article</a></p>
+
+
+<p>[26] B. Schuller, M. Valstar, F. Eyben, G. McKeown, R. Cowie, and M. Pantic, "AVEC 2011–The First International Audio/Visual Emotion Challenge," Affective Computing and Intelligent Interaction. vol. 6975, S. D'Mello, A. Graesser, B. Schuller, and J.-C. Martin, Eds., ed: Springer Berlin Heidelberg, pp. 415-424, 2011. <a href="http://sspnet.eu/wp-content/uploads/2011/07/avec2011.pdf" target="_blank">View Article</a></p>
+
+
+<p>[27] E. D. Übeyli, "Multiclass support vector machines for diagnosis of erythemato-squamous diseases," Expert Systems with Applications, vol. 35, pp. 1733-1740, 2008. <a href="http://dx.doi.org/10.1016/j.eswa.2007.08.067" target="_blank">View Article</a></p>
+
+
+<p>[28] C. Shan, S. Gong, and P. W. McOwan, "Robust facial expression recognition using local binary patterns,"  Image Processing, pp. II-370-3, 2005. <a href="http://dx.doi.org/10.1109/ICIP.2005.1530069" target="_blank">View Article</a></p>
+
+
+<p>[29] G. Littlewort, M. S. Bartlett, I. Fasel, J. Susskind, and J. Movellan, "Dynamics of Facial Expression Extracted Automatically from Video," Computer Vision and Pattern Recognition Workshop, pp. 80-80, 2004. <a href="http://dx.doi.org/10.1109/CVPR.2004.53" target="_blank">View Article</a></p>
+
+
+<p>[30] M. Yeasin, B. Bullot, and R. Sharma, "From facial expression to level of interest: a spatio-temporal approach," CVPR, pp. II-922-II-927 Vol.2, 2004. <a href="http://dx.doi.org/10.1109/CVPR.2004.1315264" target="_blank">View Article</a></p>
+
+
+<p>[31] S. Asteriadis, P. Tzouveli, K. Karpouzis, and S. Kollias, "Estimation of behavioral user state based on eye gaze and head pose—application in an e-learning environment," Multimedia Tools and Applications, vol. 41, pp. 469-493, 2009. <a href="http://dx.doi.org/10.1007/s11042-008-0240-1" target="_blank">View Article</a></p>
+
+
+<p>[32] T. Ying-li, "Evaluation of Face Resolution for Expression Analysis," in Computer Vision and Pattern Recognition Workshop, pp. 82-82, 2004. <a href="http://dx.doi.org/10.1109/CVPR.2004.60" target="_blank">View Article</a></p>
+
+
+<p>[33] G. Ramirez, T. Baltrušaitis, and L.-P. Morency, "Modeling Latent Discriminative Dynamic of Multi-dimensional Affective Signals," Affective Computing and Intelligent Interaction. vol. 6975, S. D'Mello, A. Graesser, B. Schuller, and J.-C. Martin, Eds., ed: Springer Berlin Heidelberg, pp. 396-406, 2011. <a href="http://dx.doi.org/10.1007/978-3-642-24571-8_51" target="_blank">View Article</a></p>
+
+
+<p>[34] J. Kim, H. Rao, and M. Clements, "Investigating the Use of Formant Based Features for Detection of Affective Dimensions in Speech," Affective Computing and Intelligent Interaction. vol. 6975, S. D'Mello, A. Graesser, B. Schuller, and J.-C. Martin, Eds., ed: Springer Berlin Heidelberg, pp. 369-377, 2011. <a href="http://dx.doi.org/10.1007/978-3-642-24571-8_48" target="_blank">View Article</a></p>
+
+
+<p>[35] M. Glodek, S. Tschechne, G. Layher, M. Schels, T. Brosch, S. Scherer, M. Kächele, M. Schmidt, H. Neumann, G. Palm, and F. Schwenker, "Multiple Classifier Systems for the Classification of Audio-Visual Emotional States," Affective Computing and Intelligent Interaction. vol. 6975, S. D'Mello, A. Graesser, B. Schuller, and J.-C. Martin, Eds., ed: Springer Berlin Heidelberg , pp. 359-368, 2011.<a href="http://dx.doi.org/10.1007/978-3-642-24571-8_47" target="_blank">View Article</a></p>
+
+
+
+
+
+
+
+<div class="clearfix"></div>
+  </div>
+<div class="clearfix"></div>
+  </div>
+<div class="clearfix"></div>
+  </div>
+
+  
+
+  <div class="footer">
+
+  <div class="container">
+
+  <div class="col-sm-7 footer-link">
+
+        <p><a href="http://avestia.com">Avestia Publishing</a></p>
+        <p><a href="../register/">Subscribe to our Mailing List</a></p>
+        <p><script>var refURL = window.location.protocol + "//" + window.location.host + window.location.pathname; document.write('<a href="http://avestia.com/feedback/?refURL=' + refURL+'">Feedback</a>');</script></p>
+        <p><a href="../terms/">Terms of Use</a></p>
+		<p><a href="../sitemap/">Sitemap</a></p>
+
+      </div>
+      <div class="col-sm-5 footer-txt">
+        <p>Avestia Publishing, International ASET Inc. </p>
+        <p>Unit No. 417, 1376 Bank St. </p>
+        <p>Ottawa, Ontario, Canada </p>
+        <p>Postal Code: K1H 7Y3</p>
+        <p>Phone Number: 1-613-695-3040</p>
+
+  </div>
+
+  </div>
+
+  </div>
+
+</div>
+<script src="../js/jquery.js"></script>
+<script src="../js/bootstrap.js"></script>
+</body>
+
+</html>
