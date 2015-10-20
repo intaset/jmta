@@ -1770,7 +1770,7 @@ h2 {
     background-color: #F48120;
     min-height: 430px;
     background: url(../img/journals/j-jmta.jpg) center center;
-    background-size: contain;
+    background-size: cover;
   }
   .name {
     width: 35%;
